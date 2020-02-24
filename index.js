@@ -227,16 +227,24 @@ function myInvByIdBSearch(arr, id) {
   }
 }
 
-function getCarInfoById(inventory, id) {
+// function getCarInfoById(inventory, id) {
 
+//   for (let i = 0; i < inventory.length; i++) {
+//     if (inventory[i].id === id) return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`;
+//   }
+
+//   return `Item not found!`;
+
+//   // let idx = myInvByIdBSearch(inventory, id);
+//   // if (idx) return `This is a ${inventory[idx].car_make} ${inventory[idx].car_model}`;
+// }
+
+let getCarInfoById = (inventory, id) => {
   for (let i = 0; i < inventory.length; i++) {
     if (inventory[i].id === id) return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`;
   }
 
   return `Item not found!`;
-
-  // let idx = myInvByIdBSearch(inventory, id);
-  // if (idx) return `This is a ${inventory[idx].car_make} ${inventory[idx].car_model}`;
 }
 
 /**
