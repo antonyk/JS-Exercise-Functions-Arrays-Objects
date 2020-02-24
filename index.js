@@ -215,8 +215,28 @@ let getLastCarInfo = (inventory) => {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+
+function myInvByIdBSearch(arr, id) {
+  let start = 0;
+  let end = arr.length-1;
+  while (start <= end) {
+    let mid = Math.floor((start+end)/2);
+    if (arr[mid].id === id) return mid;
+    else if (arr[mid].id < id) start = mid + 1;
+    else end = mid - 1;
+  }
+}
+
+function getCarInfoById(inventory, id) {
+
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].id === id) return `This is a ${inventory[i].car_make} ${inventory[i].car_model}`;
+  }
+
+  return `Item not found!`;
+
+  // let idx = myInvByIdBSearch(inventory, id);
+  // if (idx) return `This is a ${inventory[idx].car_make} ${inventory[idx].car_model}`;
 }
 
 /**
