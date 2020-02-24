@@ -95,8 +95,19 @@ const getName = (obj) => {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(name) {
+// function makeSmartPerson(name) {
+//   return {
+//     name: name,
+//     sum: function(num1, num2) {
+//       return num1+num2;
+//     },
+//     speak: function() {
+//       return "Hello, my name is " + this.name;
+//     }
+//   }
+// }
 
+const makeSmartPerson = name => {
   return {
     name: name,
     sum: function(num1, num2) {
@@ -106,11 +117,7 @@ function makeSmartPerson(name) {
       return "Hello, my name is " + this.name;
     }
   }
-
 }
-
-
-
 
 
 /*
